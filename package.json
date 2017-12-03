@@ -1,0 +1,33 @@
+{
+  "name": "voxscrape",
+  "version": "1.0.0",
+  "description": "a news scraper based on mongodb and express using vox.com as a feed source",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mongo",
+    "mongoose",
+    "express",
+    "node",
+    "request",
+    "cheerio",
+    "news",
+    "vox",
+    "feed"
+  ],
+  "author": "Bonnie L. Hoffman",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
+  }
+}
