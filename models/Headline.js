@@ -1,0 +1,1 @@
+// Headline.js (this is the new version of the Article.js)

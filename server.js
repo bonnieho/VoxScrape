@@ -1,8 +1,9 @@
 var express = require("express");
-var mongojs = require("mongojs");
+var expressHandlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var mongojs = require("mongojs");
 
 // Requiring our Note and Article models
 var Note = require("./models/Note.js");
@@ -15,12 +16,21 @@ var axios = require("axios");
 var request = require("request");
 var cheerio = require("cheerio");
 
+
+
 // mongoose setup for JavaScript ES6 Promises
 // second Promise is built into node (uses node promise library)
 mongoose.Promise = Promise;
 
+
 // Initializing Express
 var app = express();
+
+// Set up an Express Router
+var router = express.Router();
+
+// Have all requests go through the router middleware
+app.use(router);
 
 
 
@@ -34,6 +44,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // express.static sets the public folder as a static directory
 app.use(express.static(__dirname + "/public"));
+
+
+// connecting Handlebars to the Express app
+app.engine("handlebars", expressHandlebars({
+    defaultLayout: "main"
+}));
+app.set("view engine", "handlebars");
+
 
 
 

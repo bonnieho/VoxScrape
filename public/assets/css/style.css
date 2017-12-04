@@ -1,0 +1,114 @@
+/* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
+
+body {
+	color: #666;
+	/* font-family: 'IM Fell DW Pica'; */
+	font-family: courier, monospace;
+	margin-bottom: 48px;
+	/* background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg); */
+}
+
+h1, h2 {
+	/* font-family: 'IM Fell DW Pica'; */
+	font-family: courier, monospace;
+	 /* font-family: 'Goudy Bookletter 1911', serif; 
+	font-family: 'IM Fell DW Pica', serif; kind of pirate-y
+    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
+    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
+    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
+}
+
+h1 {
+	font-size: 400%;
+}
+
+
+p {
+	text-align: center;
+}
+
+
+.ital {
+	font-style: italic;
+}
+
+.footer {
+	font-size: 80%;
+}
+
+
+
+
+
+
+
+/* ==================================================
+=            Bootstrap 3 Media Queries             =
+================================================== */
+
+    /* ==========  Mobile First Method  ========== */
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		/* already ok at this size */
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+		/* already this size */
+    }
+
+    /* ==========  Non-Mobile First Method  ========== */
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		/* already ok at this size */
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+		/* already this size */
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+

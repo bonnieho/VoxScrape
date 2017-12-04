@@ -1,0 +1,1 @@
+// notes.js (this handles our saved notes)
