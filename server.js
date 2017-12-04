@@ -29,6 +29,9 @@ var app = express();
 // Set up an Express Router
 var router = express.Router();
 
+// Make sure that the routes file passes the router object
+require("./config/routes")(router);
+
 // Have all requests go through the router middleware
 app.use(router);
 
@@ -107,11 +110,11 @@ db.once("open", function() {
 // ==========   Routes   ==============
 
 // main index route
-app.get('/', function(req, res) {
-    res.send(index.html);
-});
+// app.get('/', function(req, res) {
+//   res.send(index.html);
+//});
 
-
+/*
 // A GET route for scraping the vox.com website
 app.get('/scrape', function(req, res) {
 
@@ -178,7 +181,7 @@ app.get('/articles', function(req, res) {
         });
 });
 
-// ==========  END routes  =============
+// ==========  END routes  =============  */
 
 
 

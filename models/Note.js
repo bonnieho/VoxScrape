@@ -7,13 +7,23 @@ var Schema = mongoose.Schema;
 
 
 // Using Schema constructor, this will create a new NoteSchema OBJECT
-var NoteSchema = new Schema({
+/* var NoteSchema = new Schema({
   title: {
     type: String
   },
   body: {
   	type: String
   }
+});
+*/
+
+var NoteSchema = new Schema({
+    _headlineId: {
+        type: Schema.Types.ObjectId,
+        ref: "Headline"
+    },
+    date: String,
+    noteText: String
 });
 
 
@@ -24,5 +34,3 @@ var Note = mongoose.model("Note", NoteSchema);
 
 // put a bow on it and send it off
 module.exports = Note;
-
-
