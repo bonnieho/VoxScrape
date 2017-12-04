@@ -8,14 +8,14 @@ var mongoose = require("mongoose");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
-// These are the scraping tools
-// Axios is a promised-based http library, similar to jQuery's Ajax method
+// =======  scraping tools  ========
+// Axios is a promise-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
 var axios = require("axios");
 var request = require("request");
 var cheerio = require("cheerio");
 
-// mongoose set up for JavaScript ES6 Promises
+// mongoose setup for JavaScript ES6 Promises
 // second Promise is built into node (uses node promise library)
 mongoose.Promise = Promise;
 
@@ -37,6 +37,8 @@ app.use(express.static(__dirname + "/public"));
 
 
 
+//  ============  port configuration =================
+
 var PORT = process.env.PORT || 3000;
 
 // +++++ Connecting to the Mongo DB using mongoose  +++++
@@ -53,7 +55,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoVoxFeed";
 // +++++ if using mongojs, this is how we hook up the database to the db variable  +++++
 // var db = mongojs(databaseUrl, collections);
 
-/* ==========  confirming mongojs db connection ================ */
+/* ++++++  confirming mongojs db connection ++++++  */
 
 /* db.on("error", function(error) {
   console.log("mongojs Database Error:", error);
@@ -65,7 +67,9 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoVoxFeed";
 mongoose.connect(MONGODB_URI, {
     useMongoClient: true
 });
+// this original one returned a warning about deprecated commands in mongoose
 // mongoose.connect("mongodb://localhost/mongoVoxFeed");
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -76,7 +80,6 @@ db.on("error", function(error) {
 // Once logged in to the db through mongoose, log a success message
 db.once("open", function() {
     console.log("Mongoose connection successful.");
-    // console.log(db);
 });
 
 
@@ -87,14 +90,13 @@ db.once("open", function() {
 
 // main index route
 app.get('/', function(req, res) {
-    // return res.send(index.html);
-    // res.send ("Hello world");
-    res.send(index);
+    res.send(index.html);
 });
 
 
 // A GET route for scraping the vox.com website
 app.get('/scrape', function(req, res) {
+
     // First, we grab the body of the html with request
     axios.get("http://www.vox.com/").then(function(response) {
 
@@ -128,7 +130,9 @@ app.get('/scrape', function(req, res) {
         Article
             .create(results)
             .then(function(dbArticle) {
+
                 console.log("inside Article");
+
                 // This message is sent if we were able to successfully scrape and SAVE an Article.
                 res.send('Scrape Complete');
             })
@@ -156,8 +160,7 @@ app.get('/articles', function(req, res) {
         });
 });
 
-
-
+// ==========  END routes  =============
 
 
 
