@@ -30,7 +30,7 @@ module.exports = {
                 _id: -1
             })
             .exec(function(err, doc) {
-                cd(doc);
+                cb(doc);
             });
     },
     update: function(query, cb) {
