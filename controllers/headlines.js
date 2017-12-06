@@ -8,7 +8,7 @@ var makeDate = require("../scripts/date");
 var Headline = require("../models/Headline");
 
 module.exports = {
-    // fetch is going to run the scrape function and grab all articles to put into the srticles collection
+    // fetch is going to run the scrape function and grab all articles to put into the articles collection
     fetch: function(cb) {
         scrape(function(data) {
             var articles = data;
