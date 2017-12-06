@@ -73,7 +73,7 @@ $(document).ready(function() {
         var emptyAlert =
             $(["<div class='alert alert-warning text-center'>",
                 "<h4>Sorry - there are not any new articles</h4>",
-                "</div>";
+                "</div>",
                 "<div class='panel panel-default'>",
                 "<div class='panel-heading text-center'>",
                 "<h3>What would you like to do?</h3>",
@@ -139,70 +139,70 @@ $(document).ready(function() {
             }
         });
     }
-});
 
-function handleArticleNotes() {
-    // ?? This function handles appending the notes modal and displaying our notes
-    // ?? We grab the id of the article to get notes for from the panel element the delete button sits inside
-    var currentArticle = $(this).parents(".panel").data();
-    // ?? Grab any notes with this headline/article id
-    $.get("/api/notes/" + currentArticle._id).then(function(data) {
-        // ?? Consrtuction our intital HTML to add to the notes modal
-        var modalText = [
-            "<div class='container-fluid text-center'>",
-            "<h4>Notes For Article: ",
-            currentArticle._id,
-            "</h4>",
-            "<hr />",
-            "<ul class='list-group note-container'>",
-            "</ul>",
-            "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
-            "<button class='btn btn-success save'>Saved Note</button>",
-            "</div>"
-        ].join("");
-        // ?? Adding the formatted HTML to the Note modal
-        bootbox.dialog({
-            message: modalText,
-            closeButton: true
-        });
-        var noteData = {
-            _id: currentArticle._id,
-            notes: data || []
-        };
-        // ?? Adding some informationa bout the article and article note sto the save button for easy access when trying toa dd a new note
-        ///////35.33 // $(".btn.save").data("article")
-        $("btn.save").data("article", noteData);
-        // ?? renderNotesList will populate the actual not HTM Linside of the model we just rendered
-        renderNotesList(noteData);
-    });
-}
 
-function handleNoteSave() {
-    //  ?? This function handles what happens when au ser tries to save a new note for an article
-    // ?? Setting a variable to holds ome formatted data about our note, 
-    // ?? grabbing the note typed into the inputb ox
-    var noteData;
-    var newNote = $(".bootbox-body textarea").val().trim();
-    // ?? If we actually have data typed into the note input field, fomrat it
-    // ?? and post it to the "/api/notes" route ands end the formatted noteData as wel
-    if (newNote) {
-        noteData = {
-            _id: $(this).data("article")._id,
-            noteText: newNote
-        };
-        $.post("/api/notes", noteData).then(function() {
-            // ?? When complete, close the modal
-            bootbox.hideAll();
+    function handleArticleNotes() {
+        // ?? This function handles appending the notes modal and displaying our notes
+        // ?? We grab the id of the article to get notes for from the panel element the delete button sits inside
+        var currentArticle = $(this).parents(".panel").data();
+        // ?? Grab any notes with this headline/article id
+        $.get("/api/notes/" + currentArticle._id).then(function(data) {
+            // ?? Consrtuction our intital HTML to add to the notes modal
+            var modalText = [
+                "<div class='container-fluid text-center'>",
+                "<h4>Notes For Article: ",
+                currentArticle._id,
+                "</h4>",
+                "<hr />",
+                "<ul class='list-group note-container'>",
+                "</ul>",
+                "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
+                "<button class='btn btn-success save'>Saved Note</button>",
+                "</div>"
+            ].join("");
+            // ?? Adding the formatted HTML to the Note modal
+            bootbox.dialog({
+                message: modalText,
+                closeButton: true
+            });
+            var noteData = {
+                _id: currentArticle._id,
+                notes: data || []
+            };
+            // ?? Adding some informationa bout the article and article note sto the save button for easy access when trying toa dd a new note
+            ///////35.33 // $(".btn.save").data("article")
+            $("btn.save").data("article", noteData);
+            // ?? renderNotesList will populate the actual not HTM Linside of the model we just rendered
+            renderNotesList(noteData);
         });
     }
-}
+
+    function handleNoteSave() {
+        //  ?? This function handles what happens when au ser tries to save a new note for an article
+        // ?? Setting a variable to holds ome formatted data about our note, 
+        // ?? grabbing the note typed into the inputb ox
+        var noteData;
+        var newNote = $(".bootbox-body textarea").val().trim();
+        // ?? If we actually have data typed into the note input field, fomrat it
+        // ?? and post it to the "/api/notes" route ands end the formatted noteData as wel
+        if (newNote) {
+            noteData = {
+                _id: $(this).data("article")._id,
+                noteText: newNote
+            };
+            $.post("/api/notes", noteData).then(function() {
+                // ?? When complete, close the modal
+                bootbox.hideAll();
+            });
+        }
+    }
 
 
-function handleNoteDelete() {
-    // ?? This function handles the deletion of notes
-    // ?? First we grab the id of the note we want to delete
-    // ?? We stored this data on the delete button when we created it
-    var noteToDelete = $(this).data("_id)";
+    function handleNoteDelete() {
+        // ?? This function handles the deletion of notes
+        // ?? First we grab the id of the note we want to delete
+        // ?? We stored this data on the delete button when we created it
+        var noteToDelete = $(this).data("_id");
         // ??  Perform a DELETE request to "/api/notes/" with the id of the note we're deleting as a parameter
         $.ajax({
             url: "/api/notes/" + noteToDelete,
