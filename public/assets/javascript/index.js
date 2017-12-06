@@ -60,7 +60,7 @@ $(document).ready(function() {
             ].join(""));
         // ??? We attach the article's id to the jQuery element
         // ??? We will use this when trying to figure out which article the user wants to save
-        panel.data("_id", articl.e_id);
+        panel.data("_id", article._id);
         // ??? We return the constructed panel jQuery element
         return panel;
     }
@@ -72,7 +72,7 @@ $(document).ready(function() {
         var emptyAlert =
             $(["<div class='alert alert-warning text-center'>",
                 "<h4>Sorry - there are not any new articles</h4>",
-                "</div>";
+                "</div>",
                 "<div class='panel panel-default'>",
                 "<div class='panel-heading text-center'>",
                 "<h3>What would you like to do?</h3>",

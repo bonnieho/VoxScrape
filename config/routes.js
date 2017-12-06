@@ -90,7 +90,7 @@ module.exports = function(router) {
 
     // route to post NEW notes to articles
     router.post("/api/notes", function(req, res) {
-        notesController / save(req.body, function(req, data) {
+        notesController.save(req.body, function(req, data) {
             res.json(data);
         });
     });
