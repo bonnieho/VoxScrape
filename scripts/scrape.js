@@ -11,13 +11,25 @@ var cheerio = require("cheerio");
 var scrape = function(cb) {
     // First, we grab the body of the html with request
     // ===== this IS different on the video =======
-    axios.get("http://www.vox.com/").then(function(response) {
+    // axios.get("http://www.vox.com/").then(function(response) {
 
-        console.log("here I am first time");
+    // =============================
+    // Use the request package to take in the body of the page's html
+    request("https://www.vox.com/", function(err, res, body) {
+        // body is the actual HTML on the page. Load this into cheerio
+        console.log("scraping");
+        // =============================
+        console.log("here I am for the first time");
 
         // Then, we load that into cheerio and save it to $ for a jQuery-flavored shorthand selector
         // ===== this IS different on the video =======
-        var $ = cheerio.load(response.data);
+        // var $ = cheerio.load(response.data);
+
+        // =============================
+        // Saving this to $ creates a virtual HTML page we can minipulate and
+        // traverse with the same methods as jQuery
+        var $ = cheerio.load(body);
+        // =============================
 
         // Save an empty results object
         var results = [];
