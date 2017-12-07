@@ -78,9 +78,8 @@ $(document).ready(function() {
                 "<div class='panel-heading text-center'>",
                 "<h3>What would you like to do?</h3>",
                 "</div>",
-                "<div class='panel-body txet-center'>",
-                "<h4><a class='scrape-new'>Scrape New Articles</a></h4>",
-                "<h4><a href='/saved'>Go To Saved Articles</a></h4>",
+                "<div class='panel-body text-center'>",
+                "<h4><a href='/'>Browse Articles</a></h4>",
                 "</div>",
                 "</div>"
             ].join(""));
@@ -111,7 +110,7 @@ $(document).ready(function() {
                 currentNote = $([
                     "<li class='list-group-item note'>",
                     data.notes[i].noteText,
-                    "<button class='btn btn-dangern note-delete'>x</button>",
+                    "<button class='btn btn-danger note-delete'>x</button>",
                     "</li>"
                 ].join(""));
                 // ?? Store the note id on the delete button for easy access when trying to delete

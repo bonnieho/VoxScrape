@@ -58,9 +58,10 @@ module.exports = function(router) {
     });
 
 
-    // route to update articles if needed
+    // route to update articles if needed 26:06
     router.patch("/api/headlines/", function(req, res) {
         headlinesController.update(req.body, function(err, data) {
+            // headlinesController.update(query, function(err, data) {
             res.json(data);
         });
     });
