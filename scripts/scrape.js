@@ -64,7 +64,7 @@ var scrape = function(cb) {
             var summary = $(this).children('p').text();
 
             // ??????????????  TO DO ...
-            /* ADD conditional state that checks to see if there is a summary on the main page, and if not, follow the link to the article's page and scrape the summary there. */
+            /* ADD conditional that checks to see if there is a summary on the main page, and if not, follow the link to the article's page and scrape the summary there. */
             // ??????????????
 
             if (title && link) {

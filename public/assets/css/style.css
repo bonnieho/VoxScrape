@@ -8,6 +8,14 @@ body {
     /* background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg); */
 }
 
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 309px;
+    padding: 0;
+    box-shadow: 10px 5px 20px 2px lightslategrey;
+}
+
 .jumbotron .overlay {
     position: absolute;
     top: 0;
@@ -21,8 +29,16 @@ body {
 
 .jumbotron .background-image {
     height: 100%;
-    background-image: url("../images/typewriter.jpg");
+    background-image: url("../images/typewriter_sm_309h.png");
     background-size: cover;
+}
+
+.jumbotron .caption {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
 }
 
 h1,
@@ -52,16 +68,57 @@ p {
     font-family: arial, helvetica, sans-serif;
     font-style: italic;
     font-size: 120%;
+    display: block;
+    margin-bottom: 24px;
 }
 
 .sublink {
     font-family: courier, monospace;
     font-style: normal;
-    font-size: 100%;
+    font-size: 80%;
+    margin-top: 12px;
 }
 
 .footer {
     font-size: 80%;
+}
+
+.panel {
+    border-radius: 0;
+    box-shadow: 3px 3px 18px lightslategrey;
+    margin-bottom: 36px;
+}
+
+.panel .panel-default .panel-heading {
+    /* background-color: #D3D3D3; */
+    background-color: #ccc;
+    padding-right: 64px;
+}
+
+.panel.panel-default .panel-heading .btn {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 36px;
+    margin-left: 5px;
+}
+
+textarea {
+    padding: 10px;
+    resize: none;
+}
+
+.bootbox-body .btn {
+    float: right;
+    margin: 5px;
+}
+
+.note .list-group-item {
+    padding: 30px;
+}
+
+.note .list-group-item .btn {
+    position: relative;
+    bottom: 10px;
 }
 
 
