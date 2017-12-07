@@ -8,6 +8,17 @@ body {
     /* background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg); */
 }
 
+.jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: auto;
+    background: linear-gradient(#333, black);
+    opacity: 0.7;
+}
+
 .jumbotron .background-image {
     height: 100%;
     background-image: url("../images/typewriter.jpg");
@@ -35,6 +46,18 @@ p {
 
 .ital {
     font-style: italic;
+}
+
+.summary {
+    font-family: arial, helvetica, sans-serif;
+    font-style: italic;
+    font-size: 120%;
+}
+
+.sublink {
+    font-family: courier, monospace;
+    font-style: normal;
+    font-size: 100%;
 }
 
 .footer {

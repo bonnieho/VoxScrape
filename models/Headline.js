@@ -19,6 +19,7 @@ var HeadlineSchema = new Schema({
         type: String,
         required: true
     },
+    summary: String,
     date: String,
     saved: {
         type: Boolean,

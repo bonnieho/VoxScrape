@@ -35,7 +35,7 @@ var scrape = function(cb) {
         var results = [];
 
         // Now, we grab every h2 within an div tag (this is how Vox has their news page set up), and do the following:
-        $('div h2').each(function(i, element) {
+        /* $('div h2').each(function(i, element) {
 
             var title = $(this).children('a').text();
             var link = $(this).children('a').attr('href');
@@ -43,13 +43,42 @@ var scrape = function(cb) {
             if (title && link) {
                 var dataToAdd = {
                     title: title,
-                    link: link
+                    link: link,
+                    summary: summary
+                };
+                results.push(dataToAdd);
+            }
+        });
+        cb(results);
+*/
+
+
+        // ===================
+
+        $('div .c-entry-box--compact__body').each(function(i, element) {
+            // grab the heading text of each article
+            var title = $(this).children('h2').text();
+            // grab the link for each article
+            var link = $(this).children('h2').children('a').attr('href');
+            // grab the summmary for each article
+            var summary = $(this).children('p').text();
+
+            // ??????????????  TO DO ...
+            /* ADD conditional state that checks to see if there is a summary on the main page, and if not, follow the link to the article's page and scrape the summary there. */
+            // ??????????????
+
+            if (title && link) {
+                var dataToAdd = {
+                    title: title,
+                    link: link,
+                    summary: summary
                 };
                 results.push(dataToAdd);
             }
         });
         cb(results);
 
+        // ====================
 
         // Save an empty result object
         /* var result = {}; */

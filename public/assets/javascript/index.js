@@ -41,20 +41,31 @@ $(document).ready(function() {
     // Creating the panel
     function createPanel(article) {
         // ??? This function takes in a single JSON object for an article/headline
-        // ??? It constructs a jQuery element containing all fo the formatted HTML for the
+        // ??? It constructs a jQuery element containing all of the formatted HTML for the
         // ??? article panel
         var panel =
             $(["<div class='panel panel-default'>",
                 "<div class='panel-heading'>",
-                "<h3>",
-                article.headline,
                 "<a class='btn btn-success save'>",
                 "Save Article",
+                "</a>",
+                "<h3>",
+                "<a href='",
+                article.link,
+                "'>",
+                article.title,
                 "</a>",
                 "</h3>",
                 "</div>",
                 "<div class='panel-body'>",
+                "<div class='summary'>",
                 article.summary,
+                "<br /><a href='",
+                article.link,
+                "' class='sublink'>",
+                article.link,
+                "</a>",
+                "</div>",
                 "</div>",
                 "</div>",
             ].join(""));
@@ -77,7 +88,7 @@ $(document).ready(function() {
                 "<div class='panel-heading text-center'>",
                 "<h3>What would you like to do?</h3>",
                 "</div>",
-                "<div class='panel-body txet-center'>",
+                "<div class='panel-body text-center'>",
                 "<h4><a class='scrape-new'>Scrape New Articles</a></h4>",
                 "<h4><a href='/saved'>Go To Saved Articles</a></h4>",
                 "</div>",
@@ -115,8 +126,8 @@ $(document).ready(function() {
         $.get("/api/fetch")
             .then(function(data) {
                 // ?? If we are able to successfully scrape the NYTIMES and compare the articles to those
-                // ?? already in our collection, re rende rthe articles on the page
-                // ?? and let the user know how man yunique articles we were able to save
+                // ?? already in our collection, re-render the articles on the page
+                // ?? and let the user know how many unique articles we were able to save
                 initPage();
                 bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "</h3>");
             });
@@ -124,6 +135,7 @@ $(document).ready(function() {
 
 
 });
+
 
 
 /*
