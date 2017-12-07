@@ -65,6 +65,28 @@ p {
 }
 
 
+/* ===========  START navbar stuff  ==============  */
+
+.navbar-header {
+    color: #ccc;
+}
+
+.navbar-brand .nav .navbar-nav {
+    color: #ccc;
+}
+
+.navbar-brand .nav .navbar-nav .active {
+    color: #fff;
+}
+
+.btn .btn-danger .scrape-new {
+    color: #ccc;
+}
+
+
+/* ===========  END navbar stuff  ==============  */
+
+
 /* ===========  START panel stuff  ==============  */
 
 .panel {
