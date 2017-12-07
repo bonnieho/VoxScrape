@@ -64,28 +64,12 @@ p {
     font-style: italic;
 }
 
-.summary {
-    font-family: arial, helvetica, sans-serif;
-    font-style: italic;
-    font-size: 120%;
-    display: block;
-    margin-bottom: 24px;
-}
 
-.sublink {
-    font-family: courier, monospace;
-    font-style: normal;
-    font-size: 80%;
-    margin-top: 12px;
-}
-
-.footer {
-    font-size: 80%;
-}
+/* ===========  START panel stuff  ==============  */
 
 .panel {
     border-radius: 0;
-    box-shadow: 3px 3px 18px lightslategrey;
+    box-shadow: 3px 3px 12px lightslategrey;
     margin-bottom: 36px;
 }
 
@@ -100,6 +84,31 @@ p {
     margin-right: 5px;
     margin-bottom: 36px;
     margin-left: 5px;
+}
+
+.panel-body {
+    padding-top: 12px;
+}
+
+.summary {
+    font-family: arial, helvetica, sans-serif;
+    font-style: italic;
+    font-size: 120%;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.sublink {
+    font-family: courier, monospace;
+    font-style: normal;
+    font-size: 90%;
+}
+
+
+/* ===========  END panel stuff  ==============  */
+
+.footer {
+    font-size: 80%;
 }
 
 textarea {
