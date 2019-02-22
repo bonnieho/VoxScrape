@@ -1,6 +1,6 @@
 # VoxScrape (News Scraper)
 
-Coding Bootcamp - Data scraping exercise based on a non-relational database technology (Mongo) to successfully pull news articles from a given site and allow for the storage of custom notes associated with those articles.
+Coding Bootcamp - Data scraping exercise based on a non-relational database technology (MongoDB) to successfully pull news articles from a given site and allow for the storage of custom notes associated with those articles. (MongoDB, Express, Node.js, javascript, html, css)
 
 
 
@@ -89,17 +89,14 @@ In this assignment, you'll create a web app that lets users view and leave comme
 
   * If your app deletes stories every time someone visits, your users won't be able to see any comments except the ones that they post.
 
+
+
 ### Helpful Links
 
 * [MongoDB Documentation](https://docs.mongodb.com/manual/)
 * [Mongoose Documentation](http://mongoosejs.com/docs/api.html)
 * [Cheerio Documentation](https://github.com/cheeriojs/cheerio)
 
-- - -
-
-### Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
 
 - - -
 
@@ -107,18 +104,57 @@ Attempt to complete homework assignment as described in instructions. If unable 
 
 Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
 
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
-
-- - -
 
 ### One Last Thing
 
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-That goes threefold for this week: MongoDB and Mongoose compose a challenging data management system. If there's anything you find confusing about these technologies, don't hesitate to speak with someone from the Bootcamp team.
+If you have any questions about this project or the material we have covered, ... That goes threefold for this week: MongoDB and Mongoose compose a challenging data management system. If there's anything you find confusing about these technologies, don't hesitate to speak with someone from the Bootcamp team.
 
 **Good Luck!**
 
-## Copyright
+- - -
 
-Coding Boot Camp (C) 2016. All Rights Reserved.
+- - -
+
+### In case you're interested...
+
+Again, you can interact with this application in real-time at the following address:<br />[https://???.herokuapp.com/](https://????.herokuapp.com/), however, if you'd prefer to kick the tires on your local machine, keep reading.
+
+
+#### Local Environment Setup
+
+To use this version of "VoxScrape" from your own local environment, here's what you've got to do:
+
+**Step 1 - Clone this repo in the command line below using the following text:**
+```
+git clone https://github.com/bonnieho/VoxScrape.git
+```
+**Step 2 - In you local directory structure, navigate into the newly cloned repo directory:**
+```
+cd VoxScrape
+```
+**Step 3 - Install the required NPM packages using the following command:**
+```
+npm install
+```
+**Step 4 - Start the application server using the following command:**
+```
+node server.js
+```
+**Step 5 - Now, open the local application on port 3000 at the URL:**
+```
+ http://localhost:3000/
+```
+
+- - -
+
+#### Author's note:
+
+This was one the the exercises originally assigned and completed in my full-stack coding bootcamp. Although the functionality of this app was successfully in place at the time of the assignment's submission, considering the limited amount of time that was available to each topic in this course, it had always been my intention to re-visit this offering to give it the spit-and-polish I felt it was worthy of. So with new blood splatters and updated friend bios, here is that result!
+
+- - - 
+
+
+(c)2017-2019 __Bonnie Lynne Hoffman__ 
+
+*toward the completion of The University of Texas at Austin Houston Coding Boot Camp Certificate - (June 2017 cohort)*
+
