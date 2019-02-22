@@ -1,5 +1,10 @@
 // Server routes
 
+var bodyParser = require("body-parser");
+// create application/json parser
+var jsonParser = bodyParser.json();
+
+
 // bringing in the scrape.js (scraping script) 
 var scrape = require("../scripts/scrape");
 
@@ -59,8 +64,9 @@ module.exports = function(router) {
 
 
     // route to update articles if needed 26:06
-    router.patch("/api/headlines/", function(req, res) {
+    router.patch("/api/headlines/", jsonParser, function(req, res) {
         headlinesController.update(req.body, function(err, data) {
+
             // headlinesController.update(query, function(err, data) {
             res.json(data);
         });

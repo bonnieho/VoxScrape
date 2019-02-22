@@ -7,6 +7,8 @@ http://bonnieho-vox-com-scraper.herokuapp.com/
 
 MONGODB_URI:         mongodb://heroku_9r1dfzpz:1j3p5esja2rrqvh1087cnsr9pn@ds129776.mlab.com:29776/heroku_9r1dfzpz
 
+MONGODB_URI: mongodb://heroku_9r1dfzpz:1j3p5esja2rrqvh1087cnsr9pn@ds129776.mlab.com:29776/heroku_9r1dfzpz
+
 
 
 

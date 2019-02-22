@@ -5,9 +5,9 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var mongojs = require("mongojs");
 
-// Requiring our Note and Article models
+// Requiring our Note and Article/Headline models
 var Note = require("./models/Note.js");
-var Article = require("./models/Article.js");
+var Headline = require("./models/Headline.js");
 
 // =======  scraping tools  ========
 // Axios is a promise-based http library, similar to jQuery's Ajax method
@@ -29,11 +29,17 @@ var app = express();
 // Set up an Express Router
 var router = express.Router();
 
-// Make sure that the routes file passes the router object
-require("./config/routes")(router);
+
 
 // Have all requests go through the router middleware
 app.use(router);
+
+
+// body-parser for form submissions
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json())
 
 
 
@@ -42,8 +48,7 @@ app.use(router);
 // logging requests with morgan
 app.use(logger("dev"));
 
-// body-parser for form submissions
-app.use(bodyParser.urlencoded({ extended: false }));
+//
 
 // express.static sets the public folder as a static directory
 app.use(express.static(__dirname + "/public"));
@@ -190,3 +195,6 @@ app.get('/articles', function(req, res) {
 app.listen(PORT, function() {
     console.log('App running on port ' + PORT);
 });
+
+// Make sure that the routes file passes the router object
+require("./config/routes")(router);

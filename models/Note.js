@@ -23,7 +23,9 @@ var NoteSchema = new Schema({
         ref: "Headline"
     },
     date: String,
-    noteText: String
+    noteText: {
+        type: String
+    }
 });
 
 
