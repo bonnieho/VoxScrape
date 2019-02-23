@@ -1,12 +1,14 @@
 # VoxScrape (News Scraper)
 
-Coding Bootcamp - Data scraping exercise based on a non-relational database technology (MongoDB) to successfully pull news articles from a given site and allow for the storage of custom notes associated with those articles. (MongoDB, Express, Node.js, javascript, html, css)
+Coding Bootcamp - Data scraping exercise based on a non-relational database technology (MongoDB) to successfully pull news articles from a given site and allow for the storage of custom notes associated with those articles. (MongoDB, Express, Node.js, Javascript, HTML, CSS)
 
 
 
 ### Overview
 
 In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
+
+Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnieho-vox-com-scraper.herokuapp.com/)
 
 ### Before You Begin
 
@@ -117,7 +119,7 @@ If you have any questions about this project or the material we have covered, ..
 
 ### In case you're interested...
 
-Again, you can interact with this application in real-time at the following address:<br />[https://???.herokuapp.com/](https://????.herokuapp.com/), however, if you'd prefer to kick the tires on your local machine, keep reading.
+Again, you can interact with this application in real-time at the following address:<br />[https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnieho-vox-com-scraper.herokuapp.com/), however, if you'd prefer to take it for a test drive on your local machine, keep reading.
 
 
 #### Local Environment Setup
