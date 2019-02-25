@@ -115,6 +115,79 @@ If you have any questions about this project or the material we have covered, ..
 
 - - -
 
+### Behind the Scenes of VoxScrape:
+
+#### File Structure
+
+```
+.
+├── config
+│   └── routes.js
+│
+├── controllers
+│   ├── headlines.js
+│   └── notes.js   
+│      
+├── models
+│   ├── Article.js
+│   ├── Headline.js   
+│   ├── index.js
+│   └── Note.js 
+│
+├── node_modules
+│   └── (multiple module directories)
+│
+├── package-lock.json
+│ 
+├── package.json
+│    
+├── public 
+│   │   
+│   ├── app.js
+│   │
+│   ├── assets
+│   │   ├── css
+│   │   │    ├── reset.css
+│   │   │    └── style.css
+│   │   │
+│   │   ├── images
+│   │   │    └── (multiple images used in home and survey pages)  
+│   │   │
+│   │   └── javascript
+│   │        ├── bootbox.min.js   
+│   │        ├── index.js
+│   │        └── saved.js 
+│   │
+│   └── index.html
+│
+├── screenshots
+│   └── (multiple images used in this README)
+│      
+├── scripts
+│   ├── date.js
+│   └── scrape.js 
+│
+├── server.js
+│      
+└── views
+      ├── home.handlebars
+      │   
+      ├── layouts 
+      │     ├── main.handlebars 
+      │     └── partials
+      │             └── notes-modal.handlebars
+      │  
+      └── saved.handlebars 
+
+```
+
+#### File and directory functionality of note:
+
+* Required npm packages, **express**, **body-parser**, and **path** are called by *`server.js`*.
+
+
+* The **`htmlRoutes.js`** file contains the following routes:
+
 - - -
 
 ### In case you're interested...
@@ -151,7 +224,7 @@ node server.js
 
 #### Author's note:
 
-This was one the the exercises originally assigned and completed in my full-stack coding bootcamp. Although the functionality of this app was successfully in place at the time of the assignment's submission, considering the limited amount of time that was available to each topic in this course, it had always been my intention to re-visit this offering to give it the spit-and-polish I felt it was worthy of. So with new blood splatters and updated friend bios, here is that result!
+This was one the the exercises originally assigned and completed in my full-stack coding bootcamp. Although the functionality of this app was successfully in place at the time of the assignment's submission, considering the limited amount of time that was available to each topic in this course, it had always been my intention to re-visit this offering to give it the spit-and-polish I felt it was worthy of. 
 
 - - - 
 
