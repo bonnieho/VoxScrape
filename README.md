@@ -4,7 +4,7 @@ Coding Bootcamp - Data scraping exercise based on a non-relational database tech
 
 
 
-### Overview
+## Overview
 
 In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
 
@@ -66,6 +66,8 @@ Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnie
 15. [Watch this demo of a possible submission](mongo-homework-demo.mov). See the deployed demo application [here](http://nyt-mongo-scraper.herokuapp.com/).
 
 16. Your site doesn't need to match the demo's style, but feel free to attempt something similar if you'd like. Otherwise, just be creative!
+
+
 
 ## Instructions
 
