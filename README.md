@@ -32,6 +32,8 @@ Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnie
 
 * **request**
 
+(check to make sure that all six packages are included!)
+
 9. **NOTE**: If you want to earn complete credit for your work, you must use all six of these packages in your assignment.
 
 10. In order to deploy your project to Heroku, you must set up an mLab provision. mLab is remote MongoDB database that Heroku supports natively. Follow these steps to get it running:
