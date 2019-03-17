@@ -20,17 +20,17 @@ Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnie
 
 2. Run `npm init`. When that's finished, install and save these npm packages:
 
-3. express
+* **express**
 
-4. express-handlebars
+* **express-handlebars**
 
-5. mongoose
+* **mongoose**
 
-6. body-parser
+* **body-parser**
 
-7. cheerio
+* **cheerio**
 
-8. request
+* **request**
 
 9. **NOTE**: If you want to earn complete credit for your work, you must use all six of these packages in your assignment.
 
@@ -115,7 +115,7 @@ Now that we have a backend to our applications, we use Heroku for hosting. Pleas
 
 ### One Last Thing
 
-If you have any questions about this project or the material we have covered, ... That goes threefold for this week: MongoDB and Mongoose compose a challenging data management system. If there's anything you find confusing about these technologies, don't hesitate to speak with someone from the Bootcamp team.
+MongoDB and Mongoose compose a challenging data management system. If there's anything you find confusing about these technologies, don't hesitate to speak with someone from the Bootcamp team.
 
 **Good Luck!**
 
