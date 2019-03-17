@@ -16,7 +16,7 @@ Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnie
 
 ### Before You Begin
 
-1. Create a GitHub repo for this assignment and clone it to your computer. Any name will do -- just make sure it's related to this project in some fashion.
+1. Create a GitHub repo for this assignment and clone it to your computer.
 
 2. Run `npm init`. When that's finished, install and save these npm packages:
 
