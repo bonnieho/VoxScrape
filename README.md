@@ -24,13 +24,13 @@ Published site: [https://bonnieho-vox-com-scraper.herokuapp.com/](https://bonnie
 
 * **express-handlebars**
 
-* **mongoose**
+* **mongoose** (yes)
 
-* **body-parser**
+* **body-parser** (yes)
 
-* **cheerio**
+* **cheerio** (yes)
 
-* **request**
+* **request** (yes)
 
 (check to make sure that all six packages are included!)
 
